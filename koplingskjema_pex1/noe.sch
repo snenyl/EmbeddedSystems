@@ -1,0 +1,219 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:LF33_TO220 U1
+U 1 1 5D91E018
+P 6700 2750
+F 0 "U1" H 6700 2992 50  0000 C CNN
+F 1 "LF33_TO220" H 6700 2901 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6700 2975 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c4/0e/7e/2a/be/bc/4c/bd/CD00000546.pdf/files/CD00000546.pdf/jcr:content/translations/en.CD00000546.pdf" H 6700 2700 50  0001 C CNN
+	1    6700 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D921D03
+P 6150 3150
+F 0 "C1" H 6265 3196 50  0000 L CNN
+F 1 "0.1uF" H 6265 3105 50  0000 L CNN
+F 2 "" H 6188 3000 50  0001 C CNN
+F 3 "~" H 6150 3150 50  0001 C CNN
+	1    6150 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5D923954
+P 7250 3150
+F 0 "C2" H 7368 3196 50  0000 L CNN
+F 1 "2.2uF" H 7368 3105 50  0000 L CNN
+F 2 "" H 7288 3000 50  0001 C CNN
+F 3 "~" H 7250 3150 50  0001 C CNN
+	1    7250 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3000 6150 2750
+Wire Wire Line
+	6150 2750 6400 2750
+Wire Wire Line
+	7250 3000 7250 2750
+Wire Wire Line
+	7250 2750 7000 2750
+$Comp
+L power:GND #PWR0101
+U 1 1 5D928E99
+P 6700 3400
+F 0 "#PWR0101" H 6700 3150 50  0001 C CNN
+F 1 "GND" H 6705 3227 50  0000 C CNN
+F 2 "" H 6700 3400 50  0001 C CNN
+F 3 "" H 6700 3400 50  0001 C CNN
+	1    6700 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3350 6700 3350
+Wire Wire Line
+	6700 3350 6700 3400
+Wire Wire Line
+	7250 3300 7250 3350
+Wire Wire Line
+	6150 3300 6150 3350
+Wire Wire Line
+	6150 3350 6700 3350
+Connection ~ 6700 3350
+Wire Wire Line
+	6700 3350 6700 3050
+$Comp
+L MCU_Microchip_ATmega:ATmega168-20PU U?
+U 1 1 5D92CC69
+P 3250 4050
+F 0 "U?" H 2607 4096 50  0000 R CNN
+F 1 "ATmega168-20PU" H 2607 4005 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 3250 4050 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2545-8-bit-AVR-Microcontroller-ATmega48-88-168_Datasheet.pdf" H 3250 4050 50  0001 C CNN
+	1    3250 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D?
+U 1 1 5D93C530
+P 5050 4550
+F 0 "D?" H 5050 4766 50  0000 C CNN
+F 1 "D_Zener" H 5050 4675 50  0000 C CNN
+F 2 "" H 5050 4550 50  0001 C CNN
+F 3 "~" H 5050 4550 50  0001 C CNN
+	1    5050 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D93FD56
+P 3250 2250
+F 0 "C?" H 3365 2296 50  0000 L CNN
+F 1 "0.1uF" H 3365 2205 50  0000 L CNN
+F 2 "" H 3288 2100 50  0001 C CNN
+F 3 "~" H 3250 2250 50  0001 C CNN
+	1    3250 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D950CB1
+P 3250 2100
+F 0 "#PWR?" H 3250 1850 50  0001 C CNN
+F 1 "GND" H 3255 1927 50  0000 C CNN
+F 2 "" H 3250 2100 50  0001 C CNN
+F 3 "" H 3250 2100 50  0001 C CNN
+	1    3250 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D953A63
+P 3250 5550
+F 0 "#PWR?" H 3250 5300 50  0001 C CNN
+F 1 "GND" H 3255 5377 50  0000 C CNN
+F 2 "" H 3250 5550 50  0001 C CNN
+F 3 "" H 3250 5550 50  0001 C CNN
+	1    3250 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2750 7500 2750
+Connection ~ 7250 2750
+Text GLabel 7500 2750 2    50   Input ~ 0
+vcc
+NoConn ~ 3300 2150
+Wire Wire Line
+	3250 2400 3250 2450
+Wire Wire Line
+	3250 2450 4200 2450
+Connection ~ 3250 2450
+Wire Wire Line
+	3250 2450 3250 2550
+Text GLabel 4200 2450 2    50   Input ~ 0
+vcc
+Wire Wire Line
+	6150 2750 5800 2750
+Connection ~ 6150 2750
+Text GLabel 5800 2750 0    50   Input ~ 0
+V_inn
+$Comp
+L Device:R R?
+U 1 1 5D958801
+P 4850 4350
+F 0 "R?" V 5057 4350 50  0000 C CNN
+F 1 "4.7" V 4966 4350 50  0000 C CNN
+F 2 "" V 4780 4350 50  0001 C CNN
+F 3 "~" H 4850 4350 50  0001 C CNN
+	1    4850 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4700 4350 4600 4350
+Wire Wire Line
+	5000 4350 5050 4350
+Text GLabel 5200 4350 2    50   Input ~ 0
+vcc
+Wire Wire Line
+	4600 4350 4600 4800
+Connection ~ 4600 4350
+Text GLabel 5200 4800 2    50   Input ~ 0
+ExternalReset
+Wire Wire Line
+	4600 4800 4800 4800
+Wire Wire Line
+	5050 4400 5050 4350
+Connection ~ 5050 4350
+Wire Wire Line
+	5050 4350 5200 4350
+Wire Wire Line
+	5050 4700 5050 4800
+Connection ~ 5050 4800
+Wire Wire Line
+	5050 4800 5200 4800
+$Comp
+L Device:C C?
+U 1 1 5D960A0A
+P 4800 5100
+F 0 "C?" H 4915 5146 50  0000 L CNN
+F 1 "0.1uF" H 4915 5055 50  0000 L CNN
+F 2 "" H 4838 4950 50  0001 C CNN
+F 3 "~" H 4800 5100 50  0001 C CNN
+	1    4800 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4350 4600 4350
+Wire Wire Line
+	4800 4950 4800 4800
+Connection ~ 4800 4800
+Wire Wire Line
+	4800 4800 5050 4800
+$Comp
+L power:GND #PWR?
+U 1 1 5D965B8A
+P 4800 5250
+F 0 "#PWR?" H 4800 5000 50  0001 C CNN
+F 1 "GND" H 4805 5077 50  0000 C CNN
+F 2 "" H 4800 5250 50  0001 C CNN
+F 3 "" H 4800 5250 50  0001 C CNN
+	1    4800 5250
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
