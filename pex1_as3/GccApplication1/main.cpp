@@ -13,6 +13,7 @@ int main(void)
 	
 	DDRC |= 1 << PC3;    
 	PORTC &= ~(1 << PC3); 
+	//Endring
 	
     /* Replace with your application code */
     while (1) 
