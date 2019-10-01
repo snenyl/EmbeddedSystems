@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:noe-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -216,4 +217,36 @@ F 3 "" H 4800 5250 50  0001 C CNN
 	1    4800 5250
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:LED D?
+U 1 1 5D934177
+P 4250 3450
+F 0 "D?" V 4197 3528 50  0000 L CNN
+F 1 "LED" V 4288 3528 50  0000 L CNN
+F 2 "" H 4250 3450 50  0001 C CNN
+F 3 "~" H 4250 3450 50  0001 C CNN
+	1    4250 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D935AAC
+P 4250 3800
+F 0 "R?" H 4320 3846 50  0000 L CNN
+F 1 "R" H 4320 3755 50  0000 L CNN
+F 2 "" V 4180 3800 50  0001 C CNN
+F 3 "~" H 4250 3800 50  0001 C CNN
+	1    4250 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 4250 3200 1    50   Input ~ 0
+vcc
+Wire Wire Line
+	4250 3300 4250 3200
+Wire Wire Line
+	4250 3600 4250 3650
+Wire Wire Line
+	3850 4050 4250 4050
+Wire Wire Line
+	4250 4050 4250 3950
 $EndSCHEMATC
