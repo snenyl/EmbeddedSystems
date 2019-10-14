@@ -15,6 +15,8 @@ int main(void)
     {
 			DDRC |= 1 << PC3;
 			PORTC &= ~(1 << PC3);
+			
+			
     }
 }
 
