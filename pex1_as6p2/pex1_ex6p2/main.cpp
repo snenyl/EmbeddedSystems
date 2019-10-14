@@ -1,22 +1,20 @@
-/*
- * pex1_ex6p2.cpp
- *
- * Created: 07.10.2019 15:20:20
- * Author : Serious Business
- */ 
-
 #include <avr/io.h>
 
 
 int main(void)
 {
-    /* Replace with your application code */
-    while (1) 
-    {
-			DDRC |= 1 << PC3;
-			PORTC &= ~(1 << PC3);
+  
 			
+			TCCR0A = (1 << COM0B1) | (1 << COM0B0) | (1 << WGM00);
+			TCCR0B =  (1 << CS01);
+			OCR0B = 255; 
+			DDRD |= 1 << PD5;
 			
-    }
+			while (true){
+
+			}
+			
+	
+    
 }
 
