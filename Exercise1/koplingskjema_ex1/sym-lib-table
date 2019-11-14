@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Atmel_L)(type Legacy)(uri "C:/Users/Serious Business/Documents/Github/EmbeddedSystems/Exercise1/koplingskjema_ex1/atmel.lib")(options "")(descr ""))
+  (lib (name atmel_modified)(type Legacy)(uri ${KIPRJMOD}/atmel_modified.lib)(options "")(descr ""))
+)
